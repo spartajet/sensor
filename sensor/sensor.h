@@ -6,3 +6,17 @@
 #define SENSOR_SENSOR_H
 
 #endif //SENSOR_SENSOR_H
+#include "libserialport.h"
+
+
+struct sensor_info{
+    char *port_name;
+    int baud_rate;
+    enum sp_parity parity;
+    int data_bits;
+    int stop_bits;
+};
+
+enum acquire_mode{
+    ALL,LATEST,LATEST_SOME
+};
